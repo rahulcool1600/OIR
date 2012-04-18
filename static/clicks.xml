@@ -1,0 +1,19 @@
+  <clicks_item>
+      <museum_item>
+          <clicks>10</clicks>
+          <item_name>Louvre museum</item_name>
+      </museum_item>
+      <museum_item>
+          <clicks>30</clicks>
+          <item_name>Mona Lisa</item_name>
+      </museum_item>
+      <museum_item>
+          <clicks>40</clicks>
+          <item_name>Porte des Lions</item_name>
+      </museum_item>
+      <museum_item>
+          <clicks>5</clicks>
+          <item_name>Pyramid</item_name>
+      </museum_item>
+   </clicks_item>
+

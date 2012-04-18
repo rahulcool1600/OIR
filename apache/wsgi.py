@@ -15,8 +15,8 @@ framework.
 """
 
 import os, sys
-sys.path.append('C:/Museum_Proj/Oik')
-sys.path.append('C:/Museum_Proj/Oik/Oik')
+sys.path.append('')
+sys.path.append('/home/ec2-user/OIR/')
 
 apache_configuration= os.path.dirname(__file__)
 project = os.path.dirname(apache_configuration)
@@ -24,7 +24,7 @@ workspace = os.path.dirname(project)
 sys.path.append(workspace) 
 
 #Add the path to 3rd party django application and to django itself.
-sys.path.append('C:/Museum_Proj/Django-1.3.1/')
+sys.path.append('/home/ec2-user/Django-1.3.1/')
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'Oik.settings'
 

@@ -1,0 +1,19 @@
+  <likes_item>
+      <museum_item>
+          <likes>10</likes>
+          <item_name>Louvre museum</item_name>
+      </museum_item>
+      <museum_item>
+          <likes>20</likes>
+          <item_name>Mona Lisa</item_name>
+      </museum_item>
+      <museum_item>
+          <likes>40</likes>
+          <item_name>Porte des Lions</item_name>
+      </museum_item>
+      <museum_item>
+          <likes>5</likes>
+          <item_name>Pyramid</item_name>
+      </museum_item>
+   </likes_item>
+

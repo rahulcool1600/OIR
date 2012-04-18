@@ -1,3 +1,4 @@
+
 from requests.models import museumItem,museum,category
 from accounts.models import UserProfile
 from django.contrib import admin
@@ -59,7 +60,7 @@ class CategoryInline(admin.TabularInline):
     model = category
     max_num = 1
 
-
+'''
 class CustomUserCreationForm(forms.ModelForm):
     username = models.CharField(max_length=30, unique=True)
     first_name = models.CharField(max_length=30, blank=True)
@@ -74,7 +75,7 @@ class CustomUserCreationForm(forms.ModelForm):
 		
     class Meta:
         model = User
-        fields = ('username','first_name','last_name','email','is_staff','is_superuser',)
+        fields = ('username','first_name','last_name','email','is_staff','is_superuser','museum_name', 'museum_address',)
 
     def clean_email(self):
         email = self.cleaned_data["email"]
@@ -88,7 +89,19 @@ class CustomUserCreationForm(forms.ModelForm):
            museumObject=museum.objects.create(name=self.cleaned_data["museum_name"],address=self.cleaned_data["museum_address"])
 	   UserProfile.objects.create(user=user,museum=museumObject)
         return user
-
+'''
+class ProfileInline(admin.StackedInline):
+    model = UserProfile
+    fk_name = 'user'
+    max_num = 1
+    
+class CustomUserAdmin(UserAdmin):
+    list_display = ('username','email','first_name', 'last_name', 'is_staff',
+    )   
+    inlines = [ProfileInline,]
+    list_filter = ('username',)
+        
+'''
 class CustomUserAdmin(UserAdmin):
      list_filter = ('is_superuser','is_staff')
      _list_filter = list_filter
@@ -155,6 +168,12 @@ class CustomUserAdmin(UserAdmin):
                 if item.museum==request.user.get_profile().museum:
                    wanted_items.add(item.user.id)
          return User.objects.filter(id__in = wanted_items)
+         
+         
+         
+         
+         
+'''         
 
 class CategoryAdmin(admin.ModelAdmin):
         #Disallow oik admin to edit/add/delete museum Item
@@ -188,5 +207,7 @@ admin.site.unregister(Group)
 admin.site.register(museumItem,MuseumItemAdmin)
 #admin.site.register(museum,MuseumAdmin)
 admin.site.register(category,CategoryAdmin)
+admin.site.register(museum)
 #admin.site.register(Session,SessionAdmin)
+
 

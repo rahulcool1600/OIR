@@ -1,0 +1,18 @@
+  <vistors>
+      <museum_vistors>
+          <timestamp>1196463600000</timestamp>
+          <visitors>0</visitors>
+      </museum_vistors>
+      <museum_vistors>
+          <timestamp>1196550000000</timestamp>
+          <visitors>0</visitors>
+      </museum_vistors>
+      <museum_vistors>
+          <timestamp>1197327600000</timestamp>
+          <visitors> 906</visitors>
+      </museum_vistors>
+      <museum_vistors>
+          <timestamp>1199228400000</timestamp>
+          <visitors>374</visitors>
+      </museum_vistors>
+  </visitors>
